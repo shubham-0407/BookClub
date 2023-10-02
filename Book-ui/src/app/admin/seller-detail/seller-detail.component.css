@@ -1,0 +1,19 @@
+.box{
+	width: 100%;
+	background-color: #1f0cf4;
+    height: 4rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0.5rem;
+}
+.main{
+    width: 50%; 
+    margin: 0.3rem auto;
+}
+.container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    /* text-align: center; */
+}

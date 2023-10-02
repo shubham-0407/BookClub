@@ -1,0 +1,69 @@
+<div class="navbar navbar-dark bg-primary shadow-sm mb-3">
+    <div class="navbar-brand align-items-center d-flex">
+        <div>
+
+            <!-- <p><strong>List of Orders</strong></p> -->
+        </div>
+    </div>
+    <div class="navbar-brand align-item-end">
+        <div class="btn-group col-3 top_bar_user text-right ml-3" role="group" aria-label="Basic example">
+
+            <button type="button" class="btn btn-outline-light  font-weight-bold" routerLink="../../book"> Shop More
+            </button>
+            <button type="button" class="btn btn-outline-light font-weight-bold" (click)="signingOut()">Logout</button>
+            <button type="button" class="btn btn-light disabled font-weight-bold text-uppercase"
+                style="color: black;">{{displayName}}</button>
+            <button type="button" class="btn btn-light disabled"><i class="fa fa-user userIcon"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="card container mb-5  ">
+    <div class="card-body">
+        <div class="  mb-5 mt-3">
+            
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <strong class="fab fa-mdb fa-4x ms-0" style="color:#088bd7 ;">List of Order</strong>
+                        <!-- <p class="pt-0">invoice@bookclub.com</p> -->
+                    </div>
+
+                </div>
+
+                 
+
+                <div class="row my-2 mx-1 justify-content-center">
+                    <table class="table table-striped ">
+                        <thead class="text-white ">
+                            <tr>
+                                <th scope="col">Order Id</th>
+                                <th scope="col">Quantity</th>
+                                <!-- <th scope="col">Unit Price</th> -->
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <!-- <tbody>
+                            <tr *ngFor="let item of cartItem; let i = index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{item.Title}}</td>
+                                 
+                                <td>Rs {{item.Price}}</td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                </div>
+                
+                <hr>
+                <div class="row">                
+                    <div class="col-xl-2">
+                        <button type="button" class="btn btn-primary text-capitalize"
+                            style="background-color:#088bd7;" routerLink="../../book">Shop more</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

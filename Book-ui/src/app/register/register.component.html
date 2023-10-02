@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="mb-4 mt-3">
+        <h3>Registration Form</h3>
+    </div>
+<form #register="ngForm" (submit)="addUser(register)">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+            <label class="form-label" for="firstName">First name</label>
+          <input type="text" id="form3Example1" [(ngModel)]="firstName" name="firstName" class="form-control" />
+          
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+            <label class="form-label" for="lastName">Last name</label>
+          <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control" />
+        
+        </div>
+      </div>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="email">Email address</label>
+      <input type="email" [(ngModel)]="email" name="email" class="form-control" />
+      
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="password">Password</label>
+      <input type="password" [(ngModel)]="password" name="password" class="form-control" />
+      
+    </div>
+  
+    <!-- Checkbox -->
+    <div class="form-check d-flex mb-4">
+      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+      <label class="form-check-label" for="form2Example33">
+        I agree to the terms & conditions
+      </label>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary signupBtn mb-4">Sign up</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center mb-3">
+      <p>or</p>
+      <button type="submit" class="btn btn-danger btn-block mb-2 mx-1">
+        <i class="fab fa-google mr-3"></i>Sign up with Google
+      </button>
+  
+      <button type="submit" class="btn btn-primary btn-block mx-1">
+        <i class="fab fa-facebook-f mr-4"></i>Sign up with Facebook
+      </button>
+    </div>
+  </form>
+</div>

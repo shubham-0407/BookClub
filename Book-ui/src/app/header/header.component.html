@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <div class="super_container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Header Main -->
+            <div class="header_main">
+                <div class="container-fluid">
+                    <div class="row d-flex  ">
+                        <!-- Logo -->
+                        <div class="col col-lg-2 ">
+                            <div class="logo_container">
+                                <div class="logo"><a href="#">BookClub</a></div>
+                            </div>
+                        </div>
+                        <!-- Main navigation -->
+
+                        <div class="col-7 mt-1">
+                            <div *ngIf="(displayName == 'Admin') then adminNav else userNav"></div>
+                        </div>
+
+                        <!-- Login and Register -->
+                        <div *ngIf=" (displayName == null ) then Login"></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <ng-template #Login>
+                <!-- Login and signup button -->
+                <div class="btn-group col col-3 top_bar_user text-right mt-4" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary disabled"><i class="fa fa-user userIcon"></i></button>
+                    <button type="button" routerLink="/register" class="btn btn-outline-primary">signup</button>
+                    <button type="button" class="btn btn-outline-primary" routerLink="/login">Sign in</button>
+                    <!-- <button type="button" (click)="openSignUp(register)" class="btn btn-outline-primary">signup</button>
+                    <button type="button" (click)="openSignIn(login)" class="btn btn-outline-primary">Sign in</button> -->
+                </div>
+            </ng-template>
+ 
+            <ng-template #adminNav>
+                <ul class="nav justify-content-center main_nav_dropdown mt-2">
+                    <li class="nav-item"><a routerLink="/admin" routerLinkActive="active">Book</a></li>
+                    <li class="nav-item"><a routerLink="/admin/userDetail" routerLinkActive="active">User</a></li>
+                    <li class="nav-item"><a routerLink="/admin/sellerDetail" routerLinkActive="active">Seller</a></li>
+                    <li class="nav-item"><a routerLink="/admin/orderDetail" routerLinkActive="active">Order</a></li>
+                    <li class="nav-item"><a routerLink="/admin/myOrderDetail" routerLinkActive="active">My order</a>
+                    </li>
+                </ul>
+            </ng-template>
+
+            <ng-template #userNav>
+                <ul class="nav justify-content-center main_nav_dropdown mt-2">
+                    <li class="nav-item"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+                    <li class="nav-item"><a routerLink="/book" routerLinkActive="active">Book</a></li>
+                    <li class="nav-item" routerLinkActive="active"><a>About</a></li>
+                    <li class="nav-item" routerLinkActive="active"><a>Contact</a></li>
+                </ul>
+            </ng-template>
+        </header>
+    </div>
+
+    <!-- Login HTML -->
+
+
+  <ng-template #login let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Login</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form #loginForm="ngForm" (submit)="signInForm(loginForm)">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="email">Email address</label>
+              <input type="email" [(ngModel)]="email" name="email" class="form-control" />
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" [(ngModel)]="password" name="password" class="form-control" />
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31"   />
+                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+          
+            <!-- Register buttons -->
+            <div class="text-center mb-4">
+              <p>Not a member? <a routerLink="/register">Register</a></p>
+            </div>
+          </form>
+	</div>
+	<div class="modal-footer">
+		<button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Sign in</button>
+	</div>
+</ng-template>
+  
+  
+  <!-- Register HTML -->
+  <ng-template #register let-c="close" let-d="dismiss">
+    <div class="container">
+      <div class="mb-4 mt-3 modal-header">
+        <h3>Registration Form</h3>
+        <button type="button" class="btn-close closeBtn" aria-label="Close" (click)="d('Cross click')"></button>
+      </div>
+  
+      <div class="modal-body">
+        <form #registerForm="ngForm" (submit)="addUser(registerForm)">
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="firstName">First name</label>
+                <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control" />
+  
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="lastName">Last name</label>
+                <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control" />
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="email">Email address</label>
+            <input type="email" [(ngModel)]="email" name="email" class="form-control" />
+  
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" [(ngModel)]="password" name="password" class="form-control" />
+  
+          </div>
+  
+          <div class="form-check d-flex mb-4">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+            <label class="form-check-label" for="form2Example33">
+              I agree to the terms & conditions
+            </label>
+          </div>
+  
+          <button type="submit" class="btn btn-primary authBtn mb-4" (click)="c('Save click')">Sign up</button>
+  
+          <div class="text-center mb-3">
+            <p>or</p>
+            <button type="button" class="btn btn-danger btn-block mb-2 mx-1">
+              <i class="fa fa-google mr-3 signUpIcon"></i>Sign up with Google
+            </button>
+  
+            <button type="button" class="btn btn-primary btn-block mb-2 mx-1">
+              <i class="fa fa-facebook mr-3 signUpIcon"></i>Sign up with Facebook
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ng-template>
+</body>
+
+</html>

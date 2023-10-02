@@ -1,0 +1,14 @@
+.container{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 40%;
+    border: 2px solid rgb(239, 239, 239);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.signupBtn{
+    margin: 0rem 9rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 15rem;
+}

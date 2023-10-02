@@ -1,0 +1,88 @@
+ body{
+   overflow-x: hidden;
+ }
+
+ .container {
+   position: relative;
+ }
+ 
+ 
+ /* Bottom right text */
+ .text-block {
+   position: absolute;
+   top: 10rem;
+   left: 5rem;
+   color: white;
+   padding-left: 20px;
+   padding-right: 20px;
+   font-size: 4.5rem;
+   font-weight: bold;
+ }
+
+ /* Counter*/
+ .box1{
+   background-color: rgb(231, 231, 231);
+   height: 25rem;
+   margin: 2rem 0rem;
+   padding: 1rem;
+ }
+  
+
+.counter-box {
+  display: block;
+  background: #96aae0;
+  padding: 40px 20px 37px;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.counter-box p {
+  margin: 5px 0 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500
+}
+
+.counter-box i {
+  font-size: 60px;
+  margin: 0 0 15px;
+  color: whitesmoke
+}
+
+.counter { 
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #4d4d4d;
+  line-height: 28px
+}
+
+.counter-box.colored {
+     background: #095dfa;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+  color: #fff
+}
+  
+.box2{
+  background-color: #709beb;
+  width: 100%;
+  margin: 2rem 0rem;
+  padding: 1rem;
+}
+
+.box3{
+  border: none;
+  background-color: rgb(231, 231, 231);
+  margin: 2rem 0rem;
+  padding: 1rem;
+}
+.section{
+  border: 2px solid rgb(146, 146, 146);
+  border-radius: 8px ;
+}
+   

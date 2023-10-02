@@ -1,0 +1,36 @@
+
+<div class="container py-3 h-100 ">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col col-xl-11">
+      <div class="card bg-light" style="border-radius: 0.5rem;">
+        <div class="row g-0">
+          <div class="col-md-6 col-lg-5 d-none d-md-block">
+            <img [src]="bookDetails.result.Image" alt="login form" class="img-fluid"
+              style="border-radius: 1rem 0 0 1rem;" />
+          </div>
+          <div class="col-md-6 col-lg-7 d-flex align-items-center">
+            <div class="card-body p-3 p-lg-4 text-black">
+              <form>
+                <h4 class="fw-normal font-weight-bold text-uppercase" style="letter-spacing: 1px;">
+                  {{bookDetails.result.Title}}</h4>
+                <a class="small text-muted fw-bold mb-3 pb-3" href="#!">By -
+                  <span>{{bookDetails.result.Author}}</span></a><br>
+                <h6>Description:</h6>
+                <p> ipsum dolor sit amet consectetur adipisicing elit. Recusandae libero commodi ipsum a esse
+                  consequuntur, ipsam amet? Debitis quasi laudantium libero sapiente earum inventore, harum eligendi
+                  minus magnam perferendis perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium porro commodi libero aliquam ad atque quas, temporibus doloribus blanditiis modi
+                  reprehenderit aliquid quis tempore natus rem nobis deserunt! Veritatis, quos?</p>
+                <p class="mb-5 pb-lg-2 mt-3" style="color: black; font-weight: bold;">Price - <a href="#!"
+                    style="color: #000000;">Rs.{{bookDetails.result.Price}}</a></p>
+              </form>
+              <div class="pt-1 mb-4">
+                <button class="btn btn-success buyBtn btn-floating" type="button" routerLink="../../buyNow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

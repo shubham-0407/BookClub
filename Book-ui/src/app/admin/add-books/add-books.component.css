@@ -1,0 +1,19 @@
+.container{
+    width: 50%;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: 1.5px solid rgb(188, 185, 185);
+    border-radius: 0.5rem;
+    background-color: rgba(237, 237, 237, 0.7);
+}
+ 
+.resetBtn{
+    padding: 0.3rem 1.2rem;
+    font-size: 1.2rem;
+    width: 6rem;
+}
+
+input{
+    border: 1.5px solid rgb(162, 162, 162);
+}
