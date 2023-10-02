@@ -8,7 +8,7 @@ var logger = require('morgan');
 var cors = require('cors');
 var mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://bookShopDev:root@bookshop.3mx3v4m.mongodb.net/BookShopDevelopment",
+mongoose.connect("mongodb+srv://bookShopDev:<password>.3mx3v4m.mongodb.net/BookShopDevelopment",
             () =>{console.log("Connection Successful")},
             (err) =>{`Error in connection ${err}`}
 );
